@@ -16,16 +16,18 @@
   font-family: 'Inter', sans-serif;
   max-width: 700px;
   margin: 0 auto;
+  background-image: url(../images/bg.png), linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+  background-size: 4px;
 }
 
 h1.title {
   font-family: 'Press Start 2P', sans-serif;
-  font-size: 49px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
 h2.subtitle {
   font-family: 'Press Start 2P', sans-serif;
-  font-size: 14px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
 }
 
