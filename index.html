@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="stylesheet" href="./styles/btn.css" />
+    <link rel="icon" href="./images/favicon.png" />
+    <link rel="icon" href="./svg/favicon.svg" />
   </head>
   <body class="page">
     <header class="header">
@@ -18,22 +21,30 @@
     <main>
       <section class="cards">
         <article class="card">
-          <h3>Фритрек и нулевой спринт: подготовка к работе</h3>
+          <h3>Фритрек и нулевой спринт: Подготовка к работе</h3>
           <div class="img-container">
-            <img src="./images/img-1.jpeg" alt="" />
-            <span>&lt;/HTML&gt;</span>
+            <img
+              src="./images/img-1.jpeg"
+              class="sepia"
+              alt="Мем про кота-акробата"
+            />
+            <span class="img-span">&lt;/HTML&gt;</span>
           </div>
           <p>
             Это было самое начало пути. На этом этапе важно было проникнуться
             основами и настроиться на учёбу. И, возможно, подумать, как новые
-            знания могут повлиять на ваше будущее. Было немного волнительно, но
-            я очень быстро принялся за учебу и настроился.
+            знания могут повлиять на ваше будущее.Было немного волнительно, но я
+            очень быстро принялся за учебу и настроился.
           </p>
         </article>
         <article class="card">
           <h3>1 спринт: Я — чистый лист</h3>
           <div class="img-container">
-            <img src="./images/img-2.jpeg" alt="" /><span>детокс</span>
+            <img
+              src="./images/img-2.jpeg"
+              alt="Мем про ютуб шортсы"
+              class="grayscale"
+            /><span class="img-span">детокс</span>
           </div>
           <p>
             На первых этапах мы работали со страхами и сомнениями, которые часто
@@ -47,7 +58,11 @@
         <article class="card">
           <h3>1 спринт: А если не получится?</h3>
           <div class="img-container">
-            <img src="./images/img-3.jpeg" alt="" /><span>мотивация</span>
+            <img
+              src="./images/img-3.jpeg"
+              alt="Мем про 2012 год"
+              class="invert"
+            /><span class="img-span">мотивация</span>
           </div>
           <p>
             Первый проект — позади! Но это всё ещё самое начало пути. Радость
@@ -59,7 +74,11 @@
         <article class="card">
           <h3>2 спринт: Погоня за идеалом</h3>
           <div class="img-container">
-            <img src="./images/img-4.jpeg" alt="" /><span>стремление</span>
+            <img
+              src="./images/img-4.jpeg"
+              alt="Мем про котенка который не туда нажал"
+              class="hue-rotate"
+            /><span class="img-span">стремление</span>
           </div>
           <p>
             На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы
@@ -73,7 +92,11 @@
         <article class="card">
           <h3>2 спринт: О тех, кто рядом</h3>
           <div class="img-container">
-            <img src="./images/img-5.jpeg" alt="" /><span>лучше</span>
+            <img
+              src="./images/img-5.jpeg"
+              alt="Мем про сидящих вместе друзей"
+              class="saturate"
+            /><span class="img-span">лучше</span>
           </div>
           <p>
             Всё это время вы были не одиноки (хотя, возможно, иногда и
@@ -88,7 +111,11 @@
         <article class="card">
           <h3>3 спринт: Обходные стратегии</h3>
           <div class="img-container">
-            <img src="./images/img-6.jpeg" alt="" /><span>универсал</span>
+            <img
+              src="./images/img-6.jpeg"
+              alt="Мем про питание котов и людей"
+              class="brightness"
+            /><span class="img-span">универсал</span>
           </div>
           <p>
             На этом курсе вы постоянно решали разные задачи. В какой-то момент
@@ -100,7 +127,11 @@
         <article class="card">
           <h3>3 спринт: Когда опускаются руки</h3>
           <div class="img-container">
-            <img src="./images/img-7.jpeg" alt="" /><span>фокус</span>
+            <img
+              src="./images/img-7.jpeg"
+              alt="Мем про памятник затопленным кораблям и Жириновского"
+              class="contrast"
+            /><span class="img-span">фокус</span>
           </div>
           <p>
             Во время учёбы часто возникает чувство, когда не знаешь, за что
@@ -113,7 +144,11 @@
         <article class="card">
           <h3>«Сейчас я здесь»</h3>
           <div class="img-container">
-            <img src="./images/img-8.jpeg" alt="" /><span>легенда</span>
+            <img
+              src="./images/img-8.jpeg"
+              alt="Мем про 8 миллиардов Райанов Гослингов"
+              class="multiple-filters"
+            /><span class="img-span">легенда</span>
           </div>
           <p>
             Сейчас вы уже очень много знаете о вёрстке. Но это только начало.
@@ -125,12 +160,17 @@
             фронтендом :3
           </p>
         </article>
-        <button class="button" onclick="window.insert.showModal()">
+        <button
+          class="btn btn-save"
+          type="button"
+          onclick="window.insert.showModal()"
+        >
           <svg
             width="24"
             height="24"
             viewBox="0 0 24 24"
             fill="none"
+            class="floppy"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use xlink:href="./svg/floppy-symbol.svg#floppy"></use>
@@ -139,36 +179,18 @@
         </button>
       </section>
     </main>
-    <dialog id="insert">
-      <div class="insert-dialog">
-        <div class="header-container">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use xlink:href="./svg/floppy-symbol.svg#floppy"></use>
-          </svg>
-          <h3>Вставьте дискету, чтобы продолжить</h3>
-        </div>
-        <button class="button" onclick="window.insert.close()">
-          <span class="button__text">ОК</span>
-        </button>
-      </div>
-    </dialog>
     <template id="card-like">
       <div class="card__buttons-container">
-        <button class="card__icon-button">
+        <button class="card__icon-button" type="button">
           <svg
-            width="40"
+            width="43"
             height="43"
-            viewBox="0 0 40 43"
+            viewBox="0 0 43 43"
             fill="none"
             class="like-icon"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid meet"
+            transform="translate(2, 4)"
           >
             <g class="heart">
               <path
@@ -194,11 +216,30 @@
             />
           </svg>
         </button>
-        <button class="card__like-button">
+        <button class="card__like-button btn" type="button">
           <span class="button__text">Like</span>
         </button>
       </div>
     </template>
+    <dialog id="insert">
+      <div class="insert-dialog">
+        <div class="header-container">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use xlink:href="./svg/floppy-symbol.svg#floppy"></use>
+          </svg>
+          <h3>Вставьте дискету, чтобы продолжить</h3>
+        </div>
+        <button class="btn" onclick="window.insert.close()">
+          <span class="button__text">ОК</span>
+        </button>
+      </div>
+    </dialog>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/like.js"></script>
   </body>

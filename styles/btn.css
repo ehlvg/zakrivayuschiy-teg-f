@@ -1,0 +1,63 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12.5px 37px;
+  font-size: 14px;
+  font-family: var(--secondary-font);
+  max-width: 130px;
+  width: 100%;
+  border: 2px solid black;
+  background: white;
+  overflow: hidden;
+  cursor: pointer;
+  isolation: isolate;
+  justify-content: center;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.btn:hover::before,
+.btn:focus-visible::before {
+  transform: translateX(0);
+}
+
+.btn:focus-visible {
+  box-shadow: 2px 2px 0 black;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.btn .button__text,
+.btn svg {
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference;
+  color: white;
+  filter: brightness(0) invert(1);
+}
+
+.btn svg {
+  width: 21px;
+  height: 21px;
+}
+
+.btn-save {
+  max-width: 335px;
+  margin: 0 auto;
+  margin-block-end: 100px;
+  font-size: 14px;
+  padding: 15px 18px;
+}

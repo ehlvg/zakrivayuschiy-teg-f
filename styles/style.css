@@ -40,7 +40,7 @@ h2.subtitle {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: clamp(120px, 3vw, 128px) 14px;
+  padding: 128px 14px;
   border: 2px solid black;
   width: 100%;
   gap: 20px;
@@ -56,14 +56,14 @@ h2.subtitle {
 .card h3 {
   font-size: 18px;
   font-variation-settings: "wght" 700;
-  padding: 10px 5px;
+  padding: 4px 9px;
   border-block-end: 2px solid black;
 }
 
 .card img {
   width: 100%;
   height: auto;
-  max-height: 450px;
+  max-height: 696px;
   aspect-ratio: 1 / 1;
   object-fit: contain;
   border-block-end: 2px solid black;
@@ -74,7 +74,8 @@ h2.subtitle {
   position: relative;
 }
 
-.card .img-container span {
+.img-span {
+  opacity: 0.5;
   position: absolute;
   top: 25px;
   right: 25px;
@@ -86,7 +87,7 @@ h2.subtitle {
 }
 
 @supports (-webkit-text-stroke: 1px white) {
-  .card .img-container span {
+  .img-span {
     -webkit-text-stroke: 1px white;
     text-shadow: none;
   }
@@ -94,28 +95,20 @@ h2.subtitle {
 
 .card p {
   padding: 25px;
+  padding-block-end: 0;
+  font-size: 18px;
+  margin-block-end: 0;
+  line-height: 21px;
 }
 
 .card .card__buttons-container {
   display: flex;
-  gap: 12px;
+  gap: 5px;
   justify-content: end;
+  padding-block-start: 23px;
   padding-block-end: 25px;
   padding-inline-end: 25px;
   align-items: center;
-}
-
-.card__like-button {
-  border: 2px solid black;
-  padding: 12.5px 0;
-  width: 130px;
-  overflow: hidden;
-  transition: color 0.3s ease;
-  position: relative;
-  display: inline-block;
-  background: transparent;
-  font-size: 14px;
-  font-family: var(--secondary-font);
 }
 
 .card__icon-button {
@@ -123,6 +116,10 @@ h2.subtitle {
   height: 38px;
   background: none;
   border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cards {
@@ -133,68 +130,43 @@ h2.subtitle {
 
 /* Фильтры */
 
-.card:nth-child(1) img {
+.sepia {
   filter: sepia(100%);
 }
 
-.card:nth-child(2) img {
+.grayscale {
   filter: grayscale(100%);
 }
 
-.card:nth-child(3) img {
+.invert {
   filter: invert(100%);
 }
 
-.card:nth-child(4) img {
+.hue-rotate {
   filter: hue-rotate(90deg);
 }
 
-.card:nth-child(5) img {
+.saturate {
   filter: saturate(8);
 }
 
-.card:nth-child(6) img {
+.brightness {
   filter: brightness(0.25);
 }
 
-.card:nth-child(7) img {
+.contrast {
   filter: contrast(200%);
 }
 
-.card:nth-child(8) img {
+.multiple-filters {
   filter: sepia(100%) hue-rotate(90deg) saturate(8) contrast(200%);
 }
 
-.button {
-  max-width: 380px;
-  margin: 0 auto;
-  width: 100%;
-  border: 2px solid black;
-  padding: 12.5px 37px;
-  font-size: 14px;
-  font-family: var(--secondary-font);
-  gap: 8px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-block-end: 100px;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  background: white;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.button svg {
-  width: 18px;
-  height: 18px;
-}
+/* Модальное окно */
 
 #insert[open] {
   max-width: 350px;
   padding: 30px 40px;
-  position: absolute;
-  top: 25%;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -230,34 +202,20 @@ h2.subtitle {
   height: 64px;
 }
 
-.button:focus-visible {
-  box-shadow: 2px 2px 0 black;
-  outline: none;
-  transition: box-shadow 0.3s ease;
-}
+/* Медиавыражения */
 
-.button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
-  z-index: 1;
-}
+@media (width <= 500px) {
+  .header {
+    padding: 120px 14px;
+  }
 
-.button .button__text,
-.button svg {
-  position: relative;
-  z-index: 2;
-  mix-blend-mode: difference;
-  color: white;
-  filter: brightness(0) invert(1);
-}
+  .btn.btn-save {
+    flex-direction: column;
+    max-width: 306px;
+  }
 
-.button:hover::before {
-  transform: translateX(0);
+  .btn-save .floppy {
+    width: 28px;
+    height: 28px;
+  }
 }
