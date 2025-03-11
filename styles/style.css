@@ -168,18 +168,21 @@ h2.subtitle {
 .button {
   max-width: 380px;
   margin: 0 auto;
-  background: white;
   width: 100%;
   border: 2px solid black;
   padding: 12.5px 37px;
   font-size: 14px;
   font-family: var(--secondary-font);
-  display: flex;
-  align-items: center;
   gap: 8px;
   justify-content: center;
   flex-wrap: wrap;
   margin-block-end: 100px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: white;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .button svg {
@@ -225,16 +228,6 @@ h2.subtitle {
 .header-container svg {
   width: 64px;
   height: 64px;
-}
-
-.button {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  background: white;
-  border: 2px solid var(--border-color, #000);
-  overflow: hidden;
-  cursor: pointer;
 }
 
 .button:focus-visible {
