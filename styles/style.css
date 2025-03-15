@@ -175,9 +175,10 @@ h2.subtitle {
 .insert-dialog {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   justify-content: center;
   align-items: center;
+  max-height: 191px;
 }
 
 .header-container {
@@ -198,7 +199,7 @@ h2.subtitle {
 }
 
 .header-container svg {
-  width: 64px;
+  width: 90px;
   height: 64px;
 }
 
