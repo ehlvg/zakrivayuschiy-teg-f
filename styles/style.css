@@ -166,10 +166,10 @@ h2.subtitle {
 
 #insert[open] {
   max-width: 350px;
-  padding: 30px 40px;
+  padding: 29px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 
 .insert-dialog {
@@ -178,7 +178,6 @@ h2.subtitle {
   gap: 30px;
   justify-content: center;
   align-items: center;
-  max-height: 191px;
 }
 
 .header-container {
@@ -199,8 +198,8 @@ h2.subtitle {
 }
 
 .header-container svg {
-  width: 90px;
-  height: 64px;
+  width: 82px;
+  height: 63px;
 }
 
 /* Медиавыражения */
@@ -215,8 +214,15 @@ h2.subtitle {
     max-width: 306px;
   }
 
-  .btn-save .floppy {
-    width: 28px;
-    height: 28px;
+  .insert-dialog {
+    max-width: 258px;
+  }
+
+  #insert[open] {
+    padding: 30px 40px;
+  }
+
+  .header-container svg {
+    width: 94px;
   }
 }
